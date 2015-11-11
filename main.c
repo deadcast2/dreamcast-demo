@@ -22,7 +22,7 @@ int main(int argc, char **argv)
     glDepthFunc(GL_LEQUAL);
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 
-    wv_model model = load("/rd/nde/nde.obj");
+    wv_model model = load("/rd/neptune.obj");
 
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glLoadIdentity();
-        glTranslatef(0.0f, -1.0f, -8.0f);
+        glTranslatef(0.0f, -1.0f, -60.0f);
         glRotatef(rotation, 0.0f, 1.0f, 0.0f);
 
         for (i = 0; i < model.face_count; i++)
